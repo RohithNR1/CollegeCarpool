@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="client.controller.RideHistoryController"
+            prefWidth="800" prefHeight="500"
+            style="-fx-background-color: #f5f5f5;">
+
+    <top>
+        <Label text="Your Ride History"
+               style="-fx-font-size: 22px; -fx-padding: 20px; -fx-font-weight: bold;"
+               BorderPane.alignment="CENTER"/>
+    </top>
+
+    <center>
+        <VBox spacing="15" alignment="CENTER">
+            <TableView fx:id="rideHistoryTable" prefHeight="400" style="-fx-padding: 20;">
+                <columns>
+                    <TableColumn text="Trip ID" fx:id="tripIdColumn" prefWidth="80"/>
+                    <TableColumn text="Origin" fx:id="originColumn" prefWidth="120"/>
+                    <TableColumn text="Destination" fx:id="destinationColumn" prefWidth="120"/>
+                    <TableColumn text="Date" fx:id="dateColumn" prefWidth="100"/>
+                    <TableColumn text="Time" fx:id="timeColumn" prefWidth="100"/>
+                    <TableColumn text="Seats Booked" fx:id="seatsBookedColumn" prefWidth="100"/>
+                    <TableColumn text="Total Fare" fx:id="fareColumn" prefWidth="100"/>
+                    <TableColumn text="Role" fx:id="roleColumn" prefWidth="100"/>
+                </columns>
+            </TableView>
+            <Button text="Back to Dashboard" onAction="#goToDashboard"
+                style="-fx-font-size: 14px; -fx-padding: 8px 15px;" />
+        </VBox>
+    </center>
+</BorderPane>

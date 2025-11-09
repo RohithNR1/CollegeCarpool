@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import java.time.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="client.controller.TripFormController"
+            prefWidth="600" prefHeight="500"
+            style="-fx-background-color: #f0f4f8;">
+    
+    <VBox alignment="TOP_CENTER" spacing="15" layoutX="50" layoutY="30" prefWidth="500">
+        <Label text="Create New Trip" style="-fx-font-size: 22px; -fx-font-weight: bold;" />
+
+        <Label text="Origin" />
+        <TextField fx:id="originField" promptText="Origin" />
+        <Label text="Destination" />
+        <TextField fx:id="destinationField" promptText="Destination" />
+
+        <Label text="Date" />
+        <DatePicker fx:id="datePicker" />
+        <Label text="Time" />
+        <TextField fx:id="timeField" promptText="Time (HH:MM)" />
+        <Label text="Seats Available" />
+        <TextField fx:id="seatsField" promptText="Seats Available" />
+        <Label text="Fare Per Seat" />
+        <TextField fx:id="fareField" promptText="Fare Per Seat" />
+
+        <Button text="Create Trip" fx:id="createTripButton" onAction="#handleCreateTrip"
+                style="-fx-background-color: #4CAF50; -fx-text-fill: white;" />
+        <Label fx:id="statusLabel" textFill="red" />
+        <Button text="Back to Dashboard" onAction="#goToDashboard"
+        style="-fx-font-size: 14px; -fx-padding: 8px 15px;" />
+
+    </VBox>
+</AnchorPane>

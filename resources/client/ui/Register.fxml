@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="client.controller.RegisterController">
+    <VBox spacing="15" alignment="CENTER" layoutX="150" layoutY="50" prefWidth="400">
+        <ImageView fitHeight="100" fitWidth="100">
+            <image>
+                <Image url="@../assets/images/user_icon.png"/>
+            </image>
+        </ImageView>
+        <Label text="Register New Account" style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+        
+        <Label text="Full Name" />
+        <TextField fx:id="nameField" promptText="Full Name" />
+        <Label text="Email" />
+        <TextField fx:id="emailField" promptText="Email" />
+        <Label text="Phone Number" />
+        <TextField fx:id="phoneField" promptText="Phone Number" />
+        <Label text="Password" />
+        <PasswordField fx:id="passwordField" promptText="Password" />
+        <Label text="Confirm Password" />
+        <PasswordField fx:id="confirmPasswordField" promptText="Confirm Password" />
+        
+        <Button text="Register" onAction="#handleRegister" prefWidth="200"/>
+        <Hyperlink text="Already have an account? Login here" onAction="#goToLogin"/>
+        
+        <Label fx:id="statusLabel" textFill="red"/>
+    </VBox>
+</AnchorPane>

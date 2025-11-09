@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="client.controller.TripBookingController"
+            prefWidth="800" prefHeight="500"
+            style="-fx-background-color: #fffaf0;">
+
+    <top>
+        <Label text="Book a Ride"
+               style="-fx-font-size: 22px; -fx-padding: 20px; -fx-font-weight: bold;"
+               BorderPane.alignment="CENTER"/>
+    </top>
+
+    <center>
+        <VBox alignment="CENTER" spacing="15" style="-fx-padding: 20;">
+            <HBox spacing="10">
+                <Label text="Origin:"/>
+                <TextField fx:id="originField" promptText="Enter origin"/>
+            </HBox>
+
+            <HBox spacing="10">
+                <Label text="Destination:"/>
+                <TextField fx:id="destinationField" promptText="Enter destination"/>
+            </HBox>
+
+            <HBox spacing="10">
+                <Label text="Date:"/>
+                <DatePicker fx:id="tripDatePicker"/>
+            </HBox>
+
+            <Button text="Search Trips" onAction="#searchTrips"
+                    style="-fx-font-size: 14px; -fx-padding: 8px 20px;"/>
+
+            <TableView fx:id="tripTable" prefHeight="200">
+                <columns>
+                    <TableColumn text="Driver" fx:id="driverColumn" prefWidth="120"/>
+                    <TableColumn text="Origin" fx:id="originColumn" prefWidth="120"/>
+                    <TableColumn text="Destination" fx:id="destinationColumn" prefWidth="120"/>
+                    <TableColumn text="Date" fx:id="dateColumn" prefWidth="100"/>
+                    <TableColumn text="Time" fx:id="timeColumn" prefWidth="100"/>
+                    <TableColumn text="Seats" fx:id="seatsColumn" prefWidth="60"/>
+                    <TableColumn text="Fare" fx:id="fareColumn" prefWidth="80"/>
+                </columns>
+            </TableView>
+
+            <HBox spacing="10">
+                <Label text="Seats to Book:"/>
+                <TextField fx:id="seatsField" promptText="e.g., 2" maxWidth="80"/>
+                <Button text="Book Now" onAction="#bookSelectedTrip"/>
+            </HBox>
+            <Button text="Back to Dashboard" onAction="#goToDashboard"
+        style="-fx-font-size: 14px; -fx-padding: 8px 15px;" />
+
+        </VBox>
+    </center>
+</BorderPane>

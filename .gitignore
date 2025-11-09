@@ -1,0 +1,19 @@
+# Java
+*.class
+*.log
+
+# VS Code
+.vscode/.settings
+.vscode/.classpath
+.vscode/.project
+.vscode/launch.json
+.vscode/settings.json
+
+# Build output
+/bin/
+/target/
+/out/
+
+# OS
+.DS_Store
+Thumbs.db

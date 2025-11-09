@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="client.controller.LoginController">
+    <VBox spacing="15" alignment="CENTER" prefWidth="400" layoutX="150" layoutY="80">
+        <ImageView fitHeight="120" fitWidth="120">
+            <image>
+                <Image url="@../assets/images/car_icon.png" />
+            </image>
+        </ImageView>
+        <Label text="College Carpool Login" style="-fx-font-size: 22px; -fx-font-weight: bold;" />
+        
+        <Label text="Email" />
+        <TextField fx:id="emailField" promptText="Email" />
+        <Label text="Password" />
+        <PasswordField fx:id="passwordField" promptText="Password" />
+        <Button text="Login" onAction="#handleLogin" prefWidth="200" />
+        
+        <Hyperlink text="Don’t have an account? Register here" onAction="#goToRegister"/>
+        <Label fx:id="statusLabel" textFill="red" />
+    </VBox>
+</AnchorPane>

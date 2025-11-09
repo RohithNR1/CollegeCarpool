@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="dashboardPane"
+            xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="client.controller.DashboardController"
+            prefWidth="800" prefHeight="500"
+            style="-fx-background-color:#f0f8ff;">
+
+    <!-- Top header section -->
+    <top>
+        <HBox fx:id="topHBox" alignment="CENTER_LEFT" spacing="10" style="-fx-padding:15;">
+            <Label text="Dashboard"
+                   style="-fx-font-size:22px; -fx-font-weight:bold;" />
+            <Region HBox.hgrow="ALWAYS" />
+            <Button fx:id="logoutBtn" text="Logout" 
+                    onAction="#handleLogout"
+                    style="-fx-font-size:14px;" />
+        </HBox>
+    </top>
+
+    <!-- Center buttons section -->
+    <center>
+        <VBox alignment="CENTER" spacing="25">
+            <Button fx:id="tripFormBtn" text="Offer a Ride"
+                    onAction="#goToTripForm"
+                    style="-fx-font-size:16px; -fx-padding:10 20;" />
+            <Button fx:id="tripBookingBtn" text="Book a Ride"
+                    onAction="#goToTripBooking"
+                    style="-fx-font-size:16px; -fx-padding:10 20;" />
+            <Button fx:id="rideHistoryBtn" text="Ride History"
+                    onAction="#goToRideHistory"
+                    style="-fx-font-size:16px; -fx-padding:10 20;" />
+        </VBox>
+    </center>
+
+    <!-- Footer section -->
+    <bottom>
+        <Label text="College Carpool Coordinator © 2025"
+               alignment="CENTER"
+               maxWidth="1.7976931348623157E308"
+               style="-fx-font-size:12px; -fx-padding:10;" />
+    </bottom>
+</BorderPane>
