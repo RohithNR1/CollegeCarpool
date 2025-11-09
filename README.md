@@ -42,7 +42,6 @@ Copy code
 - **MySQL** – Relational database
 - **JDBC** – Java database connectivity
 - **VS Code** – IDE with Java Extension Pack
-- **Zencoder AI** – Used for project file generation
 
 ---
 
